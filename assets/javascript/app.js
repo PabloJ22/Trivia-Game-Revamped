@@ -1,3 +1,11 @@
+$("#start").on('click', function () {
+    game.start();
+});
+
+$(document).on('click', '#end', function () {
+    game.done();
+});
+
 let questions = [{
         question: "what is the outcome of: 236 x 2 - 50 - 2 =_____?",
         answers: [580, 408, 420, 460],
