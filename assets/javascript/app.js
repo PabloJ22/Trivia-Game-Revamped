@@ -59,7 +59,7 @@ let game = {
             }
 
         }
-        $("#subwrapper").append("<br><br><button id='end' class='button'>DONE! What'd I score?!?!?! =D</button>");
+        $("#subwrapper").append("<br><br><button id='end' class='button'>DONE! <br> What'd I score?!?!?! =D</button>");
     },
     done: function () {
         $.each($("input[name='question-0']:checked"), function () {
