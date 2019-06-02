@@ -6,6 +6,10 @@ $(document).on('click', '#end', function () {
     game.done();
 });
 
+// $("#start").on('click', function () {
+//     game.start();
+// });
+
 let questions = [{
         question: "what is the outcome of: 236 x 2 - 50 - 2 =_____?",
         answers: [580, 408, 420, 460],
@@ -112,5 +116,27 @@ let game = {
         $("#subwrapper").append("<h3>Correct Answer: " + this.correct + "</h3>");
         $("#subwrapper").append("<h3>incorrect Answer: " + this.incorrect + "</h3>");
         $("#subwrapper").append("<h3>Unanswered: " + (questions.length - (this.incorrect + this.correct)) + "</h3>");
+
+        $("#subwrapper").append("<br><br><button id='start' class='button'>Play Again! =D</button>");
+        $("#start").on('click', function () {
+            game.start();
+        });
+        start = function () {
+            timer = setInterval(game.countdown, 1000);
+            $("#start").remove();
+            $('result()').remove();
+            $("#subwrapper").prepend('<h2>Time Remaining: <span id="counter">90</span> Seconds</h2>');
+    
+            for (let i = 0; i < questions.length; i++) {
+                $("#subwrapper").append("<h2>" + questions[i].question + "</h2>");
+                for (let j = 0; j < questions[i].answers.length; j++) {
+                    $("#subwrapper").append("<input type='radio'  name='question-" + i + "' value='" + questions[i].answers[j] + "'>" + questions[i].answers[j]);
+    
+    
+                }
+    
+            }
+            $("#subwrapper").append("<br><br><button id='end' class='button'>DONE! <br> What'd I score?!?!?! =D</button>");
+        }
     }
 }

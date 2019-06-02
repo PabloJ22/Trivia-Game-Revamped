@@ -1,10 +1,17 @@
-img {
+/* img {
     position: absolute;
     left: 0px;
     top: 0px;
     width: 1515px;
     bottom: -5000px;
     z-index: 4;
+    height: 100vh;
+
+} */
+
+body {
+    background: url('https://alien-ufo-sightings.com/wp-content/uploads/2015/12/30_article_4360_full_ufo.jpg') no-repeat center center/cover;
+    height: 110vh;
 }
 
 .button {
@@ -45,14 +52,15 @@ img {
 #section {
     border-style: outset;
     border-width: 15px;
-    position: relative;
+    /* position: relative; */
     top: 0;
     left: 0;
     z-index: 6;
-    width: 50%;
+    /* width: 50%; */
     background-color: white;
     opacity: .8;
-    margin-left: 375px;
-    margin-top: 30px;
+    /* margin-left: 375px;
+    margin-top: 30px; */
+    align-items: center;
 
 }
